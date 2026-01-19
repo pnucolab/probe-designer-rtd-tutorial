@@ -15,7 +15,7 @@ Quick Start to use the web interface
    - K-mer Length (bp): 14
    - Max Mismatches: 2
 
-3. Click Submit to process the sample file.
+3. Click **Submit** to process the sample file.
 4. For custom analysis, paste FASTA-formatted sequence text (gene or probe sequences) into the web UI.
 
 
