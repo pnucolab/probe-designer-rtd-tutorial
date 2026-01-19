@@ -1,22 +1,32 @@
-Welcome to Lumache's documentation!
-===================================
+SoloMicrobe
+==========================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**SoloMicrobe** is a microbial probe designer tool. It is a Pipeline that designs, filters, scores, and reports oligonucleotide probes for input sequences to target microbial transcripts while checking against host/microbiome references. It produces candidate and "safe" probes (with scoring) to support microbial spatial transcriptomics studies.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Quick Start to use the web interface
+------------------------------------
 
-.. note::
+1. Navigate to https://mpd.pnucolab.com/?view=upload
+2. Default settings:
 
-   This project is under active development.
+   - Host Organism: Human
+   - Target Transcriptome: Human Transcriptome
+   - Probe Length (bp): 30
+   - K-mer Length (bp): 14
+   - Max Mismatches: 2
 
-Contents
---------
+3. Click Submit to process the sample file.
+4. For custom analysis, paste FASTA-formatted sequence text (gene or probe sequences) into the web UI.
+
+
+
+
+
+
 
 .. toctree::
+   :maxdepth: 4
+   :caption: Contents
 
-   usage
-   api
+   quickstart
+   userguide
