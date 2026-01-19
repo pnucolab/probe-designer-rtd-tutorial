@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'SoloMicrobe'
+copyright = '2026, COLAB@PNU'
+author = 'Mekonnen Abyot Melkamu'
 
 release = '0.1'
 version = '0.1.0'
