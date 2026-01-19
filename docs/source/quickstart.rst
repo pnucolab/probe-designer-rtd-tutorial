@@ -48,13 +48,30 @@ Quick Start: Using the Probe Designer Command-Line Interface (CLI)
 
 This guide explains how to run the probe design pipeline from the command line.
 
-1. Prepare Your Input
+1. Set Up the Environment
+-------------------------
+
+a. **Create and activate a Conda environment:**
+
+.. code-block:: bash
+
+   conda create -n probeset python=3.11
+   conda activate probeset
+
+b. **Install dependencies:**
+
+.. code-block:: bash
+
+   pip install -r requirements.txt
+
+
+2. Prepare Your Input
 ---------------------
 
 - Prepare your gene or probe sequences in FASTA format.
 - Only one input type is allowed per run (gene or probe).
 
-2. Basic Usage
+3. Basic Usage
 --------------
 
 Run the pipeline with either a gene or probe sequence:
@@ -71,4 +88,32 @@ Run the pipeline with either a gene or probe sequence:
 
    python probe_designer.py --probe-sequence ">probe1\nATCG..." --species human --max-mismatches 2
 
+4. Main Options and Defaults
+----------------------------
+
+- ``--gene-sequence`` / ``-gs``: Gene sequence in FASTA format (mutually exclusive with --probe-sequence)
+- ``--probe-sequence`` / ``-ps``: Probe sequence in FASTA format (mutually exclusive with --gene-sequence)
+- ``--species`` / ``-s``: Host organism (**default:** human; options: human, mouse)
+- ``--probe-length``: Probe length (**default:** 30; used only for gene input, range: 20–50)
+- ``--max-mismatches``: Maximum allowed mismatches (**default:** 2; range: 0–2)
+- ``--kmer-length``: K-mer length for safety check (**default:** 14; minimum: 14)
+- ``--align-microbiome``: Align against microbiome genomes (**default:** False)
+- ``--align-host``: Align against host transcriptome (**default:** False)
+- ``--skip-annotation``: Skip gene name annotation (**default:** False)
+
+5. Additional Notes
+-------------------
+
+- Input sequences must be in proper FASTA format.
+- At least one of ``--align-microbiome`` or ``--align-host`` should be set to True.
+- For more options, run:
+
+.. code-block:: bash
+
+   python probe_designer.py --help
+
+6. Output
+---------
+
+- Results and logs will be saved in the ``outputs/alignments/`` directory.
         
