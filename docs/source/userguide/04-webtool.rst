@@ -76,7 +76,7 @@ Best Practices
 
 - **Check Input Format:** Always validate your FASTA files before submission.
 - **Use Descriptive Headers:** For probe sequences, include metadata (e.g., start/end positions, gene IDs) in the header for easier tracking.
-- **Monitor Job Status:** Large jobs may take several minutes. You may close the browser tab if needed, but **be sure to save your job ID**. To retrieve your results later, simply return to the web interface and visit:
+- **Monitor Job Status:** Large jobs may take several minutes. If you close the page, you can retrieve your results later. Simply return to the web interface and visit:
 
   ``https://mpd.pnucolab.com/?job_id={your_job_id}``
 
